@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Навички</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        p {
+            background: white;
+            width: 500px;
+            margin: 15px auto;
+            padding: 20px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            text-align: left;
+            font-size: 20px;
+            color: #333;
+        }
+
+        /* Кнопки навігації */
+        .navigation {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .navigation a {
+            width: 60px;
+            height: 60px;
+
+            border-radius: 50%;
+            background: #333;
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: bold;
+
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+            transition: 0.2s;
+        }
+
+        .navigation a:hover {
+            transform: scale(1.1);
+            background: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Те, чому я навчився і краще освоїв під час проєктів:</h1>
+
+    <p>База даних: {{ bd }}</p>
+
+    <p>Цикли: {{ cicle }}</p>
+
+    <p>АПІшки: {{ api }}</p>
+
+    <!-- Навігація -->
+    <div class="navigation">
+
+        <a href="{% url 'main' %}">
+            Головна
+        </a>
+
+        <a href="{% url 'projects' %}">
+            Проєкти
+        </a>
+
+    </div>
+
+</body>
+</html>

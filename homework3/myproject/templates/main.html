@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #333;
+            margin-top: 25px;
+        }
+
+        p1 {
+            display: block;
+            font-size: 20px;
+            color: #555;
+            margin: 10px;
+        }
+
+        /* Кнопки навігації */
+        .navigation {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .navigation a {
+            width: 60px;
+            height: 60px;
+
+            border-radius: 50%;
+            background: #333;
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: bold;
+
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+            transition: 0.2s;
+        }
+
+        .navigation a:hover {
+            transform: scale(1.1);
+            background: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <img src="https://pdftourl.net/images/1790707726979-7b234b17-9894-41e0-9a2c-b3ae09b29b41.jpg" alt="Моя фотка">
+
+    <h1>Імя: {{ name }}</h1>
+
+    <p1>Вік: {{ age }}</p1>
+    <p1>Місто: {{ city }}</p1>
+    <p1>Хобі: {{ hobby }}</p1>
+
+
+    <!-- Навігація -->
+    <div class="navigation">
+
+        <a href="{% url 'my_able' %}">
+            Навички
+        </a>
+
+        <a href="{% url 'projects' %}">
+            Проєкти
+        </a>
+
+    </div>
+
+</body>
+</html>
